@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Press Start 2P", Arial;
+  background: black;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  padding: 1rem 0 8rem 0;
+}
+
+.binary {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.binary__item {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.binary__item__light-bulb {
+  width: 100%;
+}
+
+.binary__item__light-bulb:hover {
+  cursor: pointer;
+}
+
+.binary__item__digit {
+  font-size: 5vw;
+  margin-bottom: 0;
+}
+
+.equal-sign {
+  font-size: 8vw;
+  text-align: center;
+  padding: 2rem;
+}
+
+#decimal {
+  font-size: 8vw;
+  text-align: center;
+  /* padding-top: 3rem; */
+}
+
+footer {
+  width: 100%;
+  background: #d9d9d9;
+  color: black;
+  padding: 1rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
