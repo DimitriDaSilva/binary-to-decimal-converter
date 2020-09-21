@@ -6,16 +6,24 @@
   box-sizing: border-box;
 }
 
+html,
 body {
+  height: 100%;
   margin: 0;
   font-family: "Press Start 2P", Arial;
-  background: black;
+  background: #252525;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
   text-align: center;
   padding: 1rem 0 8rem 0;
+}
+
+main {
+  flex-grow: 1;
 }
 
 .binary {
@@ -52,16 +60,42 @@ h1 {
 #decimal {
   font-size: 8vw;
   text-align: center;
-  /* padding-top: 3rem; */
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 100%;
+  height: 70%;
+  background-color: #252525;
+  opacity: 0.5;
+  color: #fff;
+  text-align: center;
+  padding: 4vw 2vw 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  text-align: center;
+  font-size: 1vw;
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
 }
 
 footer {
   width: 100%;
-  font-size: 0.7rem;
+  font-size: 0.5rem;
   background: #d9d9d9;
-  color: black;
-  padding: 1rem;
+  color: #252525;
+  padding: 0.7rem;
   text-align: center;
-  position: absolute;
-  bottom: 0;
+  flex-shrink: 0;
 }

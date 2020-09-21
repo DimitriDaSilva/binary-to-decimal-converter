@@ -15,9 +15,9 @@ function setIconAndNumbers() {
     let idImg = `light-bulb${index}`;
     let elImg = document.getElementById(idImg);
     if (number) {
-      elImg.src = "./img/light-bulb-on.png";
+      elImg.src = "./assets/light-bulb-on.svg";
     } else {
-      elImg.src = "./img/light-bulb-off.png";
+      elImg.src = "./assets/light-bulb-off.svg";
     }
 
     // Set number
@@ -42,6 +42,7 @@ function setDecimal() {
 // Set a loop listening to all light-bulbs so that it updates onclick
 let elements = document.getElementsByClassName("binary__item__light-bulb");
 for (let i = 0; i < elements.length; i++) {
+  console.log(i);
   elements[i].addEventListener("click", update);
 }
 
